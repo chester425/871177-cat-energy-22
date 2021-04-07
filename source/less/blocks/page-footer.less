@@ -2,11 +2,6 @@
   background-color: @basic_grey;
 }
 
-.page-footer__wrapper {
-  width: 280px;
-  margin: 0 auto;
-}
-
 .page-footer__logo {
   padding-top: 39px;
 }
@@ -17,16 +12,14 @@
 }
 
 .page-footer__social {
-  width: 280px;
-  margin: 0 auto;
   margin-top: 32px;
   border-top: 1px solid @special_grey-2;
   border-bottom: 1px solid @special_grey-2;
 }
 
 .page-footer__social-list {
+  .resetting_lists();
   margin: 0 auto;
-  padding: 0;
   margin-top: 20px;
   margin-bottom: 20px;
   width: 130px;
@@ -41,7 +34,7 @@
 }
 
 .page-footer__copyright-logo {
-  font-family: "Arial", sans-serif;
+  font-family: @main-font;
   line-height: 18px;
   font-size: 16px;
   font-weight: 400;

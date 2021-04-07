@@ -5,8 +5,7 @@
 }
 
 .advantages__title {
-  margin: 0;
-  padding: 0;
+  .resetting_indenting();
   line-height: 40px;
   font-size: 36px;
   font-weight: 400;
@@ -14,42 +13,42 @@
 }
 
 .advantages__list {
-  margin: 0;
+  .resetting_indenting();
+  .resetting_lists();
   margin-top: 38px;
-  padding: 0;
 }
 
 .advantages__item {
-  font-family: "Arial", sans-serif;
+  font-family: @main-font;
   line-height: 18px;
   font-size: 14px;
   font-weight: 400;
   color: @special_dark-grey;
   margin-top: 20px;
-}
 
-.advantages__item::before {
-  content: "";
-  position: relative;
-  float: left;
-  background-repeat: no-repeat;
-  width: 60px;
-  height: 60px;
-  margin-right: 20px;
-}
+  &::before {
+    content: "";
+    position: relative;
+    float: left;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+  }
 
-.advantages__item--leaf::before {
-  background-image: url("../img/icon-leaf.svg");
-}
+  &--leaf::before {
+    background-image: url("../img/icon-leaf.svg");
+  }
 
-.advantages__item--tub::before {
-  background-image: url("../img/icon-tub.svg");
-}
+  &--tub::before {
+    background-image: url("../img/icon-tub.svg");
+  }
 
-.advantages__item--eat::before {
-  background-image: url("../img/icon-eat.svg");
-}
+  &--eat::before {
+    background-image: url("../img/icon-eat.svg");
+  }
 
-.advantages__item--alarm::before {
-  background-image: url("../img/icon-alarm.svg");
+  &--alarm::before {
+    background-image: url("../img/icon-alarm.svg");
+  }
 }

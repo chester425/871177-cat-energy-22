@@ -3,14 +3,7 @@
   background-color: @special_grey-5;
 }
 
-.example__wrapper {
-  // width: 280px;
-  margin: 0 auto;
-}
-
 .example__title {
-  width: 280px;
-  margin: 0 auto;
   padding-top: 27px;
   line-height: 40px;
   font-size: 36px;
@@ -18,16 +11,10 @@
   color: @basic_black;
 }
 
-.example__box {
-  width: 280px;
-  margin: 0 auto;
-}
-
 .example__paragraph {
-  margin: 0;
-  padding: 0;
+  .resetting_indenting();
+  font-family: @main-font;
   margin-top: 33px;
-  font-family: "Arial", sans-serif;
   line-height: 18px;
   font-size: 14px;
   font-weight: 400;

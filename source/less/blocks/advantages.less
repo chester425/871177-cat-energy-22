@@ -1,0 +1,53 @@
+.advantages {
+  width: 280px;
+  margin: 0 auto;
+  margin-top: 27px;
+}
+
+.advantages__title {
+  margin: 0;
+  line-height: 40px;
+  font-size: 36px;
+  font-weight: 400;
+  color: @basic_black;
+}
+
+.advantages__list {
+  .resetting_lists();
+  margin-top: 38px;
+}
+
+.advantages__item {
+  font-family: @main-font;
+  line-height: 18px;
+  font-size: 14px;
+  font-weight: 400;
+  color: @special_dark-grey;
+  margin-top: 20px;
+
+  &::before {
+    content: "";
+    position: relative;
+    float: left;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+  }
+
+  &--leaf::before {
+    background-image: url("../img/icon-leaf.svg");
+  }
+
+  &--tub::before {
+    background-image: url("../img/icon-tub.svg");
+  }
+
+  &--eat::before {
+    background-image: url("../img/icon-eat.svg");
+  }
+
+  &--alarm::before {
+    background-image: url("../img/icon-alarm.svg");
+  }
+}

@@ -1,0 +1,45 @@
+.option span {
+  line-height: 18px;
+  font-size: 16px;
+  font-weight: 400;
+  color: @optional_dark-grey;
+  text-transform: uppercase;
+}
+
+.option span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #cdcdcd;
+  border-radius: 50%;
+}
+
+.option input:checked + span::after {
+  opacity: 1;
+}
+
+.option span::after {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  transform: translate(-40%, -40%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: @basic_green;
+  opacity: 0;
+}
+
+.option--additional span::before {
+  border-radius: 0;
+}
+
+.option--additional span::after {
+  width: 19px;
+  height: 15px;
+  background: url("../img/icon-tick.svg") no-repeat;
+}

@@ -1,0 +1,132 @@
+.program-form__paragraph {
+  width: 280px;
+  margin: 0 auto;
+  margin-top: 37px;
+  line-height: 18px;
+  font-size: 14px;
+  font-weight: 400;
+  color: @basic_black;
+}
+
+.program-form__data {
+  .resetting_indenting();
+  padding-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  border: 0;
+  border-bottom: 1px solid @special_grey-2;
+}
+
+.program-form__text-input {
+  width: 280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+
+
+  input {
+    padding-top: 13px;
+    padding-bottom: 13px;
+    border: 1px solid @special_grey-4;
+  }
+
+  input::placeholder {
+    padding-left: 16px;
+  }
+
+  &--name input {
+    width: 228px;
+    margin-top: 39px;
+  }
+
+  &--weight input {
+    width: 191px;
+    margin-top: 13px;
+  }
+
+  &--old input {
+    width: 172px;
+    margin-top: 13px;
+  }
+
+  &--email input {
+    margin-top: 35px;
+    width: 219px;
+  }
+
+  &--phone input {
+    margin-top: 14px;
+    width: 204px;
+  }
+}
+
+.program-form__goal {
+  .resetting_indenting();
+  margin-top: 22px;
+  padding-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  border: 0;
+  border-bottom: 1px solid @special_grey-2;
+}
+
+.program-form__option {
+  position: relative;
+  width: 280px;
+  margin: 0 auto;
+  margin-top: 13px;
+  padding-top: 3px;
+  padding-bottom: 6px;
+
+  input {
+    opacity: 0;
+  }
+
+  span {
+    padding-left: 15px;
+  }
+}
+
+.program-form__contacts {
+  .resetting_indenting();
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  border: 0;
+}
+
+.program-form__comment {
+  .resetting_indenting();
+  border: 0;
+}
+
+.program-form__additional {
+  .resetting_indenting();
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  border: 0;
+}
+
+.program-form__button {
+  margin: 0 auto;
+  margin-top: 34px;
+  padding: 7px 0;
+  width: 280px;
+  border: 0;
+}
+
+.program-form__required {
+  width: 280px;
+  margin: 0 auto;
+  margin-top: 21px;
+  font-family: @main-font;
+  line-height: 16px;
+  font-size: 14px;
+  font-weight: 400;
+  color: @basic_black;
+  text-align: center;
+}

@@ -1,5 +1,7 @@
 .feature {
   margin-top: 25px;
+  display: flex;
+  flex-direction: column;
 
   span {
     font-family: @main-font;
@@ -7,6 +9,15 @@
     font-size: 12px;
     font-weight: 400;
     color: @special_dark-grey;
+
+    @media (min-width: @tablet-width) {
+      line-height: 14px;
+      font-size: 14px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    .resetting_indenting();
   }
 }
 
@@ -17,4 +28,9 @@
   font-weight: 400;
   color: @basic_black;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    line-height: 37px;
+    font-size: 30px;
+  }
 }

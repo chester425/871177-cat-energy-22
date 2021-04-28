@@ -15,5 +15,47 @@
     font-weight: 500;
     color: @basic_black;
     text-transform: uppercase;
+
+    @media (min-width: @tablet-width) {
+      line-height: 24px;
+      font-size: 18px;
+      font-weight: 400;
+    }
+
+    @media (min-width: @desktop-width) {
+      line-height: 30px;
+      font-size: 20px;
+      color: @basic_white;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    .resetting_indenting();
+    border: 0;
+    padding-top: 42px;
+
+    &--active {
+      position: relative;
+
+      a::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        display: block;
+        height: 2px;
+        background-color: @basic_green;
+        border: 5px;
+        transform: none;
+        width: 100%;
+      }
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--active {
+      a::after {
+        background-color: @basic_white;
+      }
+    }
   }
 }

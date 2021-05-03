@@ -1,19 +1,21 @@
 .toggle {
-  width: 228px;
-  margin: 0 auto;
-  padding-top: 23px;
-  padding-bottom: 25px;
   display: flex;
   justify-content: space-between;
 }
 
 .toggle__button {
   border: none;
-  .resetting_indenting();
+  padding: 0;
   line-height: 20px;
   font-size: 16px;
   font-weight: 400;
+  font-family: inherit;
   color: @basic_black;
   text-transform: uppercase;
   background-color: inherit;
+
+  @media (min-width: @tablet-width) {
+    line-height: 30px;
+    font-size: 20px;
+  }
 }

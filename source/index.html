@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -9,13 +10,17 @@
   <header class="page-header">
     <div class="page-header__wrapper centered">
       <a class="page-header__logo-title">
-        <img src="img/logo-cat-energy.svg" width="260" height="38" alt="Логотип кэт энерджи">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img src="img/logo-cat-energy.svg" alt="Логотип кэт энерджи">
+        </picture>
       </a>
       <button class="page-header__toggle" type="button"></button>
     </div>
     <nav class="main-menu">
       <ul class="main-menu__list menu-list">
-        <li class="menu-list__item">
+        <li class="menu-list__item menu-list__item--active">
           <a>Главная</a>
         </li>
         <li class="menu-list__item">
@@ -34,7 +39,10 @@
         <div class=" program-selection__wrapper centered">
           <h1 class="program-selection__title">Функциональное питание для котов</h1>
           <p class="program-selection__paragraph">Занялся собой? займись котом!</p>
-          <img class="program-selection__food-image" src="img/index-can-mobile.png" width="280" height="270" alt="фото корма">
+          <picture><source media="(min-width: 1440px)" srcset="img/index-can.png">
+            <source media="(min-width: 768px)" srcset="img/index-can-tablet.png">
+            <img class="program-selection__food-image" src="img/index-can-mobile.png" alt="фото корма">
+          </picture>
           <a class="program-selection__button button" href="form.html">Подобрать программу</a>
         </div>
       </div>
@@ -69,43 +77,54 @@
     </section>
     <!--Здесь будет пример кота -->
     <section class="example">
-      <div class="example__wrapper">
-        <h2 class="example__title centered">Живой пример</h2>
-        <div class="example__box centered">
-          <p class="example__paragraph">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-          <div class="feature">
-            <b class="feature__weight">5 кг</b>
-            <span>Снижение веса</span>
+      <h2 class="example__title centered">Живой пример</h2>
+      <div class="example__wrapper-desktop">
+        <div class="example__wrapper">
+          <div class="example__box centered">
+            <p class="example__paragraph">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+            <div class="example__container">
+              <div class="example__container-feature">
+                <div class="feature">
+                  <b class="feature__weight">5 кг</b>
+                  <span>Снижение веса</span>
+                </div>
+                <div class="feature">
+                  <b class="feature__time">60 дней</b>
+                  <span>Затрачено времени</span>
+                </div>
+              </div>
+              <p class="example__payment">Затраты на питание: <span>15 000 руб.</span></p>
+            </div>
           </div>
-          <div class="feature">
-            <b class="feature__time">60 дней</b>
-            <span>Затрачено времени</span>
+          <div class="example__description">
+            <div class="example__description-wrapper">
+              <img src="img/before-mobile.png" width="311" height="232" alt="фото кота">
+              <div class="toggle example__toggle">
+                <button class="toggle__button toggle__button--before">Было</button>
+                <div class="scale">
+                  <div class="scale__line"></div>
+                </div>
+                <button class="toggle__button toggle__button--after ">Стало</button>
+              </div>
+            </div>
           </div>
-          <p class="example__payment">Затраты на питание: <span>15 000 руб.</span></p>
-        </div>
-        <div class="example__description">
-          <div class="example__distinction-wrapper">
-            <img src="img/before-mobile.png" width="311" height="232" alt="фото кота">
-          </div>
-        </div>
-        <div class="toggle">
-          <button class="toggle__button toggle__button--before">Было</button>
-          <div class="scale">
-            <div class="scale__line"></div>
-          </div>
-          <button class="toggle__button toggle__button--after ">Стало</button>
         </div>
       </div>
     </section>
     <!-- Секция с картой -->
     <section class="contacts">
       <h2 class="visually-hidden">Карта</h2>
-      <div class="contacts__wrapper centered">
-        <p class="contacts__partner">Приглашаем к сотрудничеству дилеров!</p>
-        <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8Санкт-Петербург</p>
+      <div class="contacts__box centered">
+        <div class="contacts__wrapper">
+          <p class="contacts__partner">Приглашаем <br>к сотрудничеству дилеров!</p>
+          <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></p>
+        </div>
       </div>
       <div class="contacts__map">
-        <img src="img/map.png" width="320" height="362" alt="картa">
+        <picture><source media="(min-width: 1440px)" srcset="img/map-desktop.png">
+          <source media="(min-width: 768px)" srcset="img/map-tablet.png">
+          <img src="img/map.png" alt="картa">
+        </picture>
         <img class="contacts__map-icon" src="img/map-pin.png" width="57" height="53" alt="метка на карте">
       </div>
     </section>

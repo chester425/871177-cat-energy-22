@@ -1,11 +1,29 @@
 .programs {
   margin-top: 200px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 136px;
+  }
 }
 
 .programs__list {
   .resetting_lists();
   width: 280px;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .programs__item {
@@ -13,4 +31,12 @@
   min-height: 266px;
   background-color: @basic_grey;
   margin-top: 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 570px;
+  }
 }

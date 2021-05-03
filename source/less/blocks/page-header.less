@@ -1,6 +1,19 @@
 .page-header {
   background-color: @basic_white;
-  border-bottom: 1px solid #ededed;
+  border-bottom: 1px solid @optional_grey-3;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 auto;
+    width: 708px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+    background-color: transparent;
+  }
 }
 
 .page-header__wrapper {
@@ -8,6 +21,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (min-width: @tablet-width) {
+    .resetting_indenting();
+    margin-top: 24px;
+    width: 174px;
+    display: inline-block;
+  }
 }
 
 .page-header__toggle {
@@ -17,4 +37,8 @@
   background-image: url("../img/icon-close.svg");
   border: none;
   background-color: @basic_white;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }

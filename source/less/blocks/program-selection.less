@@ -1,25 +1,26 @@
 
 .program-selection {
   width: auto;
+}
 
+.program-selection::before {
   @media (min-width: @desktop-width) {
-    &::before {
-      content: "";
-      position: absolute;
-      display: block;
-      width: 50%;
-      height: 694px;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      background: url("../img/index-background-desktop.jpg");
-      background-color: @background_green;
-      background-position: 100%;
-      background-repeat: no-repeat;
-      z-index: -1;
-    }
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50%;
+    height: 694px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: url("../img/index-background-desktop.jpg");
+    background-color: @background_green;
+    background-position: 100%;
+    background-repeat: no-repeat;
+    z-index: -1;
   }
 }
+
 
 .program-selection__box {
   background-color: @background_green;
@@ -46,7 +47,7 @@
   width: 250px;
 
   @media (min-width: @tablet-width) {
-    .resetting_indenting();
+    margin: 0;
     padding-top: 62px;
     padding-left: 117px;
     width: 415px;
@@ -74,7 +75,7 @@
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
-    .resetting_indenting();
+    padding: 0;
     width: 283px;
     margin-left: 118px;
     margin-top: 41px;
@@ -86,7 +87,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    .resetting_indenting();
     margin-top: 40px;
     margin-left: 80px;
   }
@@ -121,9 +121,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    .resetting_indenting();
     padding: 14px 0;
-
     top: 343px;
     margin-left: 80px;
   }

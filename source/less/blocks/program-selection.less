@@ -1,26 +1,25 @@
 
 .program-selection {
   width: auto;
-}
 
-.program-selection::before {
-  @media (min-width: @desktop-width) {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 50%;
-    height: 694px;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background: url("../img/index-background-desktop.jpg");
-    background-color: @background_green;
-    background-position: 100%;
-    background-repeat: no-repeat;
-    z-index: -1;
+  &::before {
+    @media (min-width: @desktop-width) {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 50%;
+      height: 694px;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: url("../img/index-background-desktop.jpg");
+      background-color: @background_green;
+      background-position: 100%;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
   }
 }
-
 
 .program-selection__box {
   background-color: @background_green;
@@ -39,9 +38,6 @@
 .program-selection__title {
   margin: inherit;
   padding-top: 27px;
-  line-height: 36px;
-  font-size: 36px;
-  font-weight: 400;
   text-align: center;
   color: @basic_white;
   width: 250px;
@@ -53,9 +49,6 @@
     width: 415px;
     color: @basic_black;
     text-align: left;
-    line-height: 60px;
-    font-size: 60px;
-    font-weight: 400;
   }
 
   @media (min-width: @desktop-width) {

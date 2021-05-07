@@ -5,6 +5,11 @@
   color: @special_dark-grey;
   text-transform: uppercase;
 
+  @media (min-width: @tablet-width) {
+    line-height: 30px;
+    font-size: 20px;
+  }
+
   input {
     font-family: inherit;
     line-height: inherit;
@@ -12,10 +17,6 @@
     font-weight: inherit;
     color: inherit;
     text-transform: inherit;
-
-    &::placeholder {
-      color: @special_dark-grey;
-    }
   }
 
   textarea {

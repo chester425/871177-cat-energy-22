@@ -69,20 +69,20 @@
     @media (min-width: @desktop-width) {
       margin-left: 0;
     }
-  }
 
-  span::before {
-    content: "";
-    width: 24px;
-    height: 100%;
-    position: absolute;
-    background-color: @basic_white;
-    left: -24px;
-    right: 0;
+    &::before {
+      content: "";
+      width: 24px;
+      height: 100%;
+      position: absolute;
+      background-color: @basic_white;
+      left: -24px;
+      right: 0;
 
-    @media (min-width: @tablet-width) {
-      width: 40px;
-      left: -40px;
+      @media (min-width: @tablet-width) {
+        width: 40px;
+        left: -40px;
+      }
     }
   }
 

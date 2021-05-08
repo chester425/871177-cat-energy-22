@@ -1,11 +1,55 @@
+.catalog__title {
+  @media (min-width: @tablet-width) {
+    margin-top: 65px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 74px;
+  }
+}
+
 .catalog__list {
   .resetting_lists();
   margin-top: 41px;
   border-bottom: 1px solid @optional_grey;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 auto;
+    width: 708px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 83px;
+    border: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 165px;
+    width: 1220px;
+  }
 }
 
 .catalog__item {
   border-top: 1px solid @optional_grey;
+
+  @media (min-width: @tablet-width) {
+    width: 324px;
+    min-height: 431px;
+    background-color: @basic_grey;
+    margin: 140px 0 0;
+    border: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+  }
+
+  &--all {
+    @media (min-width: @tablet-width) {
+      border: 2px solid @basic_grey;
+      background-color: @basic_white;
+    }
+  }
 }
 
 .catalog__all-title {
@@ -17,6 +61,14 @@
   font-weight: 400;
   color: @optional_black;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    width: 134px;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 49px;
+  }
 }
 
 .catalog__all-paragraph {
@@ -29,15 +81,34 @@
   font-weight: 400;
   color: @special_dark-grey;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    width: 167px;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    margin-top: 23px;
+  }
 }
 
 .catalog__button {
   width: 280px;
   margin: 0 auto;
+  margin-top: 13px;
   margin-bottom: 24px;
   padding: 10px 0;
   font-size: 16px;
   line-height: 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 250px;
+    margin-bottom: 0;
+    margin-top: 33px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 168px;
+  }
 
   &--all {
     margin-top: 21px;
@@ -45,5 +116,13 @@
     line-height: 20px;
     color: @special_dark-grey;
     background-color: @basic_grey;
+
+    @media (min-width: @tablet-width) {
+      margin-top: 87px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 168px;
+    }
   }
 }

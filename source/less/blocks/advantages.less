@@ -27,7 +27,7 @@
 
 .advantages__list {
   .resetting_lists();
-  margin-top: 38px;
+  margin-top: 34px;
 
   @media (min-width: @tablet-width) {
     margin: 0 auto;
@@ -37,6 +37,7 @@
     grid-template-columns: 250px 250px;
     grid-template-rows: 280px 280px;
     gap: 37px 133px;
+    position: relative;
   }
 
   @media (min-width: @desktop-width) {
@@ -55,7 +56,14 @@
   font-size: 14px;
   font-weight: 400;
   color: @special_dark-grey;
-  margin-top: 20px;
+  margin-top: 26px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 201px;
+  }
 
   &::before {
     content: "";
@@ -69,6 +77,24 @@
     @media (min-width: @tablet-width) {
       width: 80px;
       height: 80px;
+      background-color: @basic_green;
+      background-position: center;
+      margin-bottom: 31px;
+    }
+  }
+
+  &::after {
+    @media (min-width: @tablet-width) {
+      display: block;
+      position: absolute;
+      font-family: "Oswald", "Arial", sans-serif;
+      font-size: 280px;
+      line-height: 280px;
+      font-weight: 400;
+      color: @basic_grey;
+      top: -41px;
+      left: 113px;
+      z-index: -1;
     }
   }
 
@@ -86,5 +112,29 @@
 
   &--alarm::before {
     background-image: url("../img/icon-alarm.svg");
+  }
+
+  &--leaf::after {
+    @media (min-width: @tablet-width) {
+      content: "1";
+    }
+  }
+
+  &--tub::after {
+    @media (min-width: @tablet-width) {
+      content: "2";
+    }
+  }
+
+  &--eat::after {
+    @media (min-width: @tablet-width) {
+      content: "3";
+    }
+  }
+
+  &--alarm::after {
+    @media (min-width: @tablet-width) {
+      content: "4";
+    }
   }
 }

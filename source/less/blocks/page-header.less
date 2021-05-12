@@ -32,17 +32,36 @@
 
 .page-header__logo-title {
   width: 190px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .page-header__toggle {
-  width: 20px;
-  height: 20px;
-  margin-bottom: 9px;
-  background-image: url("../img/icon-close.svg");
+  width: 24px;
+  height: 18px;
+  background-image: url("../img/icon-menu.svg");
   border: none;
   background-color: @basic_white;
+  cursor: pointer;
+  // display: none;
 
   @media (min-width: @tablet-width) {
     display: none;
+  }
+
+  &--closed {
+    width: 20px;
+    height: 20px;
+    background-image: url("../img/icon-close.svg");
+    border: none;
+    background-color: @basic_white;
+    cursor: pointer;
   }
 }

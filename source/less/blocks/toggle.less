@@ -13,9 +13,19 @@
   color: @basic_black;
   text-transform: uppercase;
   background-color: inherit;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     line-height: 30px;
     font-size: 20px;
+    border-bottom: 1px rgba(0, 0, 0, 0.24) dotted;
+  }
+
+  &:hover {
+    border-bottom: 1px rgba(0, 0, 0, 0.4) solid;
+  }
+
+  &:active {
+    border-bottom: none;
   }
 }

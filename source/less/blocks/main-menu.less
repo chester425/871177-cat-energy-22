@@ -1,6 +1,15 @@
 .main-menu {
   margin: 0;
+
+  &--closed {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
 }
+
 
 .main-menu__list {
   @media (min-width: @tablet-width) {

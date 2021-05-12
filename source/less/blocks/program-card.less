@@ -1,9 +1,39 @@
+.program-card__box {
+  display: flex;
+}
+
 .program-card__title {
   margin: 0;
+  margin-left: 19px;
+  margin-top: 30px;
   line-height: 37px;
   font-size: 24px;
   font-weight: 400;
   color: @basic_black;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 77px;
+    margin-left: 53px;
+    line-height: 36px;
+    font-size: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 214px;
+  }
+
+  &--go {
+    margin-left: 11px;
+
+    @media (min-width: @tablet-width) {
+      margin-left: 53px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-left: 214px;
+    }
+  }
 }
 
 .program-card__description {
@@ -16,6 +46,20 @@
   font-size: 14px;
   font-weight: 400;
   color: @special_dark-grey;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    width: 377px;
+    margin-top: 24px;
+    margin-left: 52px;
+    line-height: 24px;
+    font-size: 16px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 73px;
+    width: 467px;
+  }
 }
 
 .program-card__link {
@@ -31,4 +75,68 @@
   margin-left: 20px;
   padding-top: 20px;
   padding-bottom: 18px;
+
+  @media (min-width: @tablet-width) {
+    margin: 52px 0 52px 52px;
+    line-height: 30px;
+    font-size: 20px;
+    border: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 23px 0 55px 52px;
+  }
+
+  svg:hover {
+    width: 32px;
+    height: 10px;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.program-card__cat-sit {
+  margin-top: 21px;
+  margin-left: 22px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    height: 211px;
+    position: absolute;
+    right: 62px;
+    top: 81px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100px;
+    height: 106px;
+    top: 41px;
+    left: 52px;
+  }
+}
+
+.program-card__cat-go {
+  margin-top: 24px;
+  margin-left: 13px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 0;
+    width: 268px;
+    height: 200px;
+    position: absolute;
+    right: 28px;
+    top: 91px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 134px;
+    height: 100px;
+    top: 47px;
+    left: 33px;
+  }
 }

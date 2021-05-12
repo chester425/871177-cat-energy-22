@@ -11,6 +11,7 @@
 
 .page-footer__logo {
   padding-top: 39px;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     padding-top: 0;
@@ -26,6 +27,14 @@
   img {
     display: block;
     margin: 0 auto;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }
 
@@ -60,6 +69,21 @@
   }
 }
 
+.page-footer__link {
+  &:hover {
+    stroke: @basic_green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--fb {
+    fill: none;
+    stroke: @optional_grey-2;
+  }
+}
+
 .page-footer__copyright {
   margin-top: 22px;
   padding-bottom: 22px;
@@ -85,4 +109,20 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.page-footer__copyright-icon {
+  fill: @optional_grey-2;
+
+  &:hover {
+    fill: @basic_green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

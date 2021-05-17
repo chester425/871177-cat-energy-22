@@ -5,7 +5,7 @@
 .menu-list__item {
   text-align: center;
   padding-top: 22px;
-  padding-bottom: 24px;
+  padding-bottom: 19px;
   border-top: 1px solid @optional_grey-3;
 
   @media (min-width: @tablet-width) {
@@ -31,6 +31,14 @@
     @media (min-width: @desktop-width) {
       line-height: 30px;
       font-size: 20px;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
     }
   }
 

@@ -1,6 +1,19 @@
 .main-menu {
   margin: 0;
+
+  &--closed {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 26px;
+  }
 }
+
 
 .main-menu__list {
   @media (min-width: @tablet-width) {

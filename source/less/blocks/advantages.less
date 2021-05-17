@@ -5,10 +5,12 @@
 
   @media (min-width: @tablet-width) {
     width: 708px;
+    margin-top: 44px;
   }
 
   @media (min-width: @desktop-width) {
     width: 1220px;
+    margin-top: 74px;
   }
 }
 
@@ -27,12 +29,13 @@
 
 .advantages__list {
   .resetting_lists();
-  margin-top: 34px;
+  margin-top: 39px;
 
   @media (min-width: @tablet-width) {
+    counter-reset: list1;
     margin: 0 auto;
     width: 708px;
-    margin-top: 32px;
+    margin-top: 46px;
     display: grid;
     grid-template-columns: 250px 250px;
     grid-template-rows: 280px 280px;
@@ -42,7 +45,7 @@
 
   @media (min-width: @desktop-width) {
     width: 1220px;
-    margin-top: 32px;
+    margin-top: 45px;
     display: grid;
     grid-template-columns: 245px 245px 245px 245px;
     grid-template-rows: 280px;
@@ -62,7 +65,13 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    width: 201px;
+    width: 227px;
+    line-height: 24px;
+    font-size: 16px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 250px;
   }
 
   &::before {
@@ -85,9 +94,10 @@
 
   &::after {
     @media (min-width: @tablet-width) {
-      display: block;
+      counter-increment: list1;
+      content: counter(list1) " ";
       position: absolute;
-      font-family: "Oswald", "Arial", sans-serif;
+      font-family: @main-font-oswald;
       font-size: 280px;
       line-height: 280px;
       font-weight: 400;
@@ -96,6 +106,23 @@
       left: 113px;
       z-index: -1;
     }
+  }
+
+  &--alarm {
+    @media (min-width: @tablet-width) {
+      width: 245px;
+    }
+
+    br {
+      @media (max-width: @mobile-width-only) {
+        display: none;
+      }
+    }
+  }
+
+  &--leaf::after {
+    left: 119px;
+    top: -39px;
   }
 
   &--leaf::before {
@@ -112,29 +139,5 @@
 
   &--alarm::before {
     background-image: url("../img/icon-alarm.svg");
-  }
-
-  &--leaf::after {
-    @media (min-width: @tablet-width) {
-      content: "1";
-    }
-  }
-
-  &--tub::after {
-    @media (min-width: @tablet-width) {
-      content: "2";
-    }
-  }
-
-  &--eat::after {
-    @media (min-width: @tablet-width) {
-      content: "3";
-    }
-  }
-
-  &--alarm::after {
-    @media (min-width: @tablet-width) {
-      content: "4";
-    }
   }
 }

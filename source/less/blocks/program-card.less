@@ -60,6 +60,16 @@
     margin-top: 73px;
     width: 467px;
   }
+
+  &--pro {
+    @media (min-width: @tablet-width) {
+      width: 344px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 450px;
+    }
+  }
 }
 
 .program-card__link {
@@ -73,27 +83,44 @@
   display: inline-block;
   margin-top: 23px;
   margin-left: 20px;
-  padding-top: 20px;
+  padding-top: 18px;
   padding-bottom: 18px;
 
   @media (min-width: @tablet-width) {
-    margin: 52px 0 52px 52px;
     line-height: 30px;
     font-size: 20px;
     border: 0;
+    margin: 0;
+    margin-left: 52px;
+    margin-top: 31px;
   }
 
   @media (min-width: @desktop-width) {
-    margin: 23px 0 55px 52px;
+    margin: 6px 0 17px 52px;
   }
 
-  svg:hover {
-    width: 32px;
-    height: 10px;
-  }
+  svg {
+    margin-left: 11px;
+    margin-bottom: 3px;
 
-  &:active {
-    opacity: 0.3;
+    @media (min-width: @tablet-width) {
+      margin-left: 20px;
+      margin-bottom: 5px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-left: 24px;
+      margin-bottom: 4px;
+    }
+
+    &:hover {
+      width: 32px;
+      height: 10px;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 
@@ -108,7 +135,7 @@
     height: 211px;
     position: absolute;
     right: 62px;
-    top: 81px;
+    top: 77px;
   }
 
   @media (min-width: @desktop-width) {
@@ -136,7 +163,7 @@
   @media (min-width: @desktop-width) {
     width: 134px;
     height: 100px;
-    top: 47px;
-    left: 33px;
+    top: 45px;
+    left: 32px;
   }
 }

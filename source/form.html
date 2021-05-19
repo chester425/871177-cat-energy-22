@@ -35,15 +35,15 @@
     <div class="program-form">
       <div class="program-form__wrapper centered">
         <h1 class="program-form__title title">Подбор программы</h1>
-        <p class="program-form__paragraph">Заполните анкету и мы подберем<br>программу питания для вашего кота</p>
+        <p class="program-form__paragraph">Заполните анкету, и мы подберем <br>программу питания для вашего кота</p>
       </div>
       <form class="program-form__form" action="https://echo.htmlacademy.ru" method="post">
-        <div class="program-form__container centered">
+        <div class="program-form__container">
           <fieldset class="program-form__data">
             <legend class="visually-hidden">Данные кота</legend>
             <label class="text-input program-form__text-input program-form__text-input--name">
               <span>Имя:*</span>
-              <input type="text" name="name" placeholder="Барсик" required>
+              <input type="text" id="asd" name="name" placeholder="Барсик" required>
             </label>
             <label class="text-input program-form__text-input program-form__text-input--weight">
               <span>Вес (кг):*</span>
@@ -56,18 +56,20 @@
           </fieldset>
           <fieldset class="program-form__goal">
             <legend class="visually-hidden">Цель программы</legend>
-            <label class="option program-form__option program-form__option--goal">
-              <input type="radio" name="option" value="Похудение" checked="checked">
-              <span>Похудение</span>
-            </label>
-            <label class="option program-form__option">
-              <input type="radio" name="option" value="Набор массы">
-              <span>Набор массы</span>
-            </label>
-            <label class="option program-form__option">
-              <input type="radio" name="option" value="Ваш совет">
-              <span>Не знаю (Нужен ваш совет)</span>
-            </label>
+            <div class="program-form__goal-box">
+              <label class="option program-form__option program-form__option--goal">
+                <input type="radio" name="option" value="Похудение" checked="checked">
+                <span>Похудение</span>
+              </label>
+              <label class="option program-form__option program-form__option--mass">
+                <input type="radio" name="option" value="Набор массы">
+                <span>Набор массы</span>
+              </label>
+              <label class="option program-form__option program-form__option--advice">
+                <input type="radio" name="option" value="Ваш совет">
+                <span>Не знаю (Нужен ваш совет)</span>
+              </label>
+            </div>
           </fieldset>
         </div>
         <fieldset class="program-form__contacts">
@@ -76,13 +78,19 @@
             <h3 class="centered"><span>Контактные данные (владельца кота)</span></h3>
           </div>
           <div class="program-form__contacts-wrapper centered">
-            <label class="text-input program-form__text-input program-form__text-input--email">
+            <label class="text-input program-form__text-input program-form__text-input--email program-form__invalid-svg">
               <span>E-mail:*</span>
               <input type="email" name="email" placeholder="kuklachev@gmail.com" required>
+              <svg width="19" height="14">
+                <use xlink:href="img/sprite.svg#icon-email"></use>
+              </svg>
             </label>
-            <label class="text-input program-form__text-input program-form__text-input--phone">
+            <label class="text-input program-form__text-input program-form__text-input--phone program-form__invalid-svg">
               <span>Телефон:*</span>
               <input type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
+              <svg width="20" height="21">
+                <use xlink:href="img/sprite.svg#icon-phone"></use>
+              </svg>
             </label>
           </div>
         </fieldset>
@@ -130,11 +138,11 @@
       <h2 class="visually-hidden">Карта</h2>
       <div class="contacts__box centered">
         <div class="contacts__wrapper">
-          <p class="contacts__partner">Приглашаем <br>к сотрудничеству дилеров!</p>
+          <p class="contacts__partner">Приглашаем <br><span>к сотрудничеству дилеров!</span></p>
           <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></p>
         </div>
       </div>
-      <div class="contacts__map">
+      <div class="contacts__map contacts__map--form">
         <picture>
           <source media="(min-width: 1440px)" srcset="img/map-desktop.png">
           <source media="(min-width: 768px)" srcset="img/map-tablet.png">
@@ -152,29 +160,38 @@
         <div class="page-footer__social">
           <ul class="page-footer__social-list">
             <li class="page-footer__social-item">
-              <a class="page-footer__link" href="https://vk.com/htmlacademy">
-                <img src="img/icon-vk.svg" width="23" height="16" alt="Иконка вк">
+              <a class="page-footer__link  page-footer__link--vk" href="https://vk.com/htmlacademy">
+                <svg width="23" height="16">
+                  <use xlink:href="img/sprite.svg#icon-vk"></use>
+                </svg>
               </a>
             </li>
             <li class="page-footer__social-item">
-              <a class="page-footer__link" href="https://www.instagram.com/htmlacademy">
-                <img src="img/icon-instagram.svg" width="16" height="16" alt="Иконка инстаграмма">
+              <a class="page-footer__link page-footer__link--instagram" href="https://www.instagram.com/htmlacademy">
+                <svg width="16" height="16">
+                  <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                </svg>
               </a>
             </li>
             <li class="page-footer__social-item">
-              <a class="page-footer__link" href="https://www.facebook.com/htmlacademy">
-                <img src="img/icon-fb.svg" width="22" height="22" alt="Иконка фейсбук">
+              <a class="page-footer__link page-footer__link--fb" href="https://www.facebook.com/htmlacademy">
+                <svg width="22" height="22">
+                  <use xlink:href="img/sprite.svg#icon-fb"></use>
+                </svg>
               </a>
             </li>
           </ul>
         </div>
         <div class="page-footer__copyright">
           <a class="page-footer__copyright-logo" href="https://up.htmlacademy.ru/adaptive/21">HTML Academy
-            <img src="img/icon-htmlacademy.svg" width="40" height="40" alt="Логотип академии">
+            <svg class="page-footer__copyright-icon" width="40" height="40">
+              <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
+            </svg>
           </a>
         </div>
       </div>
     </footer>
   </main>
+  <script src="js/invalid-input.js" type="text/javascript"></script>
 </body>
 </html>

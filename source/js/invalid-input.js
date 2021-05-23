@@ -1,4 +1,4 @@
-var formInput = document.querySelectorAll('.text-input > input');
+var formInput = document.querySelectorAll('input[required]');
 var formLabel = document.querySelectorAll('.program-form__invalid-svg');
 var formLabelInput = document.querySelectorAll('.program-form__invalid-svg > input');
 var formBtn = document.querySelector('.program-form__button');

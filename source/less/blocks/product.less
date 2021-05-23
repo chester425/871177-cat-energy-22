@@ -11,6 +11,8 @@
 
 .product__image {
   width: 140px;
+  height: 111px;
+  padding-top: 13px;
 
   @media (min-width: @tablet-width) {
     display: block;
@@ -24,19 +26,72 @@
     height: 196px;
   }
 
+  &--big {
+    @media (max-width: @mobile-width-only) {
+      padding-top: 10px;
+      height: 114px;
+    }
+  }
+
+  &--fish {
+    @media (max-width: @mobile-width-only) {
+      padding-top: 26px;
+      height: 98px;
+    }
+  }
+
+  &--buckwheat {
+    @media (max-width: @mobile-width-only) {
+      padding-top: 29px;
+      height: 95px;
+    }
+  }
+
+  &--rice {
+    @media (max-width: @mobile-width-only) {
+      padding-top: 23px;
+      height: 101px;
+    }
+  }
+
   img {
     display: block;
     margin: 0 auto;
 
     @media (min-width: @tablet-width) {
       position: absolute;
-      bottom: 75px;
+      bottom: 87px;
       left: 78px;
     }
 
     @media (min-width: @desktop-width) {
-      left: 43px;
+      left: 40px;
     }
+  }
+
+  &--big img {
+    @media (min-width: @desktop-width) {
+      bottom: 91px;
+    }
+  }
+
+  &--big-chicken img {
+    @media (min-width: @tablet-width) {
+      bottom: 79px;
+
+      @media (min-width: @desktop-width) {
+        bottom: 88px;
+      }
+    }
+  }
+}
+
+.product__title-box {
+  width: 140px;
+
+  @media (min-width: @tablet-width) {
+    width: 252px;
+    margin: 0 auto;
   }
 }
 
@@ -55,11 +110,12 @@
     font-size: 20px;
     line-height: 24px;
     text-align: center;
-    margin-top: -40px;
+    margin-top: -52px;
   }
 
   @media (min-width: @desktop-width) {
     line-height: 21px;
+    margin-top: -44px;
   }
 
   a {
@@ -69,35 +125,44 @@
 
 .product__table {
   margin: 0;
-  width: 140px;
   font-family: @main-font;
   font-size: 12px;
   line-height: 16px;
   font-weight: 400;
   color: @special_dark-grey;
+  margin-top: 12px;
+  margin-left: -3px;
 
   @media (min-width: @tablet-width) {
     width: 250px;
     margin: 0 auto;
     font-size: 16px;
     border-collapse: collapse;
-    margin-top: 21px;
+    margin-top: 13px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 180px;
+    width: 167px;
+    margin-top: 16px;
   }
 
   tr {
+    display: flex;
+    width: 140px;
+    justify-content: space-between;
+
     @media (min-width: @tablet-width) {
       border-bottom: 1px solid @special_grey-3;
+      width: 100%;
     }
   }
 
   td {
+    padding: 0;
+
     @media (min-width: @tablet-width) {
       padding-top: 7px;
-      padding-bottom: 9px;
+      padding-bottom: 8px;
     }
 
     &:nth-child(even) {

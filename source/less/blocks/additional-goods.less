@@ -8,60 +8,66 @@
 
 .additional-goods__list {
   .resetting_lists();
-  margin-top: 36px;
+  margin-top: 31px;
   padding-bottom: 19px;
-  border-bottom: 1px solid @special_grey-3;
 
   @media (min-width: @tablet-width) {
     width: 708px;
     border: 1px solid @special_grey-3;
     border-top: 0;
     padding: 0;
+    margin-top: 76px;
   }
 
   @media (min-width: @desktop-width) {
     width: 896px;
     border: 0;
-    margin: 0;
+    border-bottom: 1px solid #cdcdcd;
+    margin-top: 76px;
   }
 }
 
 .additional-goods__item {
   border-top: 1px solid @special_grey-3;
-  margin-top: 19px;
+  min-height: 128px;
 
-  @media (min-width: 768px) {
+  @media (min-width: @tablet-width) {
     margin: 0;
+    min-height: 138px;
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;
+    min-height: auto;
   }
 
   &:nth-last-child(1) {
     border-bottom: 1px solid @special_grey-3;
+
+    @media (min-width: @tablet-width) {
+      border-bottom: 0;
+    }
   }
 
   span {
-    display: inline-block;
     margin: 0;
-    margin-top: 13px;
     line-height: 14px;
     font-size: 14px;
     font-weight: 400;
+    font-family: @main-font;
     color: @special_dark-grey;
   }
 }
 
 .additional-goods__item-box {
-  @media (min-width: 768px) {
+  @media (min-width: @tablet-width) {
     width: 632px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    padding-top: 26px;
+    padding-top: 13px;
   }
 
   @media (min-width: @desktop-width) {
@@ -71,7 +77,7 @@
 
 .additional-goods__title {
   margin: 0;
-  margin-top: 23px;
+  padding-top: 12px;
   line-height: 16px;
   font-size: 16px;
   font-weight: 400;
@@ -86,9 +92,18 @@
 }
 
 .additional-goods__title-box {
-  @media (min-width: 768px) {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 14px;
+
+  @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 296px;
+    margin-right: 10px;
   }
 
   span {
@@ -98,6 +113,13 @@
       min-width: 96px;
       text-align: end;
       margin: 0;
+
+      @media (min-width: @desktop-width) {
+        font-size: 16px;
+        line-height: 20px;
+        min-width: 53px;
+        text-align: left;
+      }
     }
   }
 }
@@ -108,11 +130,11 @@
   font-size: 16px;
   line-height: 20px;
 
-  @media (min-width: 768px) {
+  @media (min-width: @tablet-width) {
     margin: 0 auto;
-    margin-top: 28px;
+    margin-top: 23px;
     margin-bottom: 28px;
-    padding: 6px 0;
+    padding: 9px 0;
     width: 632px;
   }
 
@@ -130,7 +152,12 @@
   background-repeat: no-repeat;
   width: 280px;
   height: 289px;
-  margin-top: 39px;
+  margin-top: 20px;
+
+  @media (max-width: @mobile-width-only) and (min-resolution: 1.5dppx) {
+    background-image: url("../img/gift-mobile@2x.jpg");
+    background-size: contain;
+  }
 
   @media (min-width: @tablet-width) {
     margin-top: 70px;
@@ -141,21 +168,35 @@
     display: flex;
   }
 
+  @media (min-width: @tablet-width) and (min-resolution: 1.5dppx) {
+    background-image: url("../img/gift-tablet@2x.jpg");
+    background-size: contain;
+  }
+
   @media (min-width: @desktop-width) {
     width: 245px;
     height: 289px;
     background-image: url("../img/gift-desktop.jpg");
-    margin: 0;
+    margin-top: 78px;
     flex-direction: column;
+  }
+
+  @media (min-width: @desktop-width) and (min-resolution: 1.5dppx) {
+    background-image: url("../img/gift-decktop@2x.jpg");
+    background-size: contain;
   }
 
   img {
     margin-left: 101px;
     margin-top: 58px;
 
-    @media (min-width: 768px) {
+    @media (min-width: @tablet-width) {
       margin-left: 78px;
       margin-top: 57px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-left: 85px;
     }
   }
 }
@@ -163,7 +204,7 @@
 .additional-goods__photo-paragraph {
   display: inline-block;
   margin: 0 auto;
-  margin-top: 48px;
+  margin-top: 44px;
   width: 280px;
   font-size: 16px;
   line-height: 20px;
@@ -182,7 +223,7 @@
   @media (min-width: @desktop-width) {
     width: 161px;
     margin: 0 auto;
-    margin-top: 46px;
+    margin-top: 50px;
     text-align: center;
   }
 }

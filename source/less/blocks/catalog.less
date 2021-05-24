@@ -1,6 +1,8 @@
 .catalog__title {
+  margin-top: 26px;
+
   @media (min-width: @tablet-width) {
-    margin-top: 65px;
+    margin-top: 60px;
   }
 
   @media (min-width: @desktop-width) {
@@ -19,18 +21,19 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-top: 83px;
+    margin-top: 24px;
     border: 0;
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 165px;
+    margin-top: 22px;
     width: 1220px;
   }
 }
 
 .catalog__item {
   border-top: 1px solid @optional_grey;
+  min-height: 208px;
 
   @media (min-width: @tablet-width) {
     width: 324px;
@@ -42,12 +45,18 @@
 
   @media (min-width: @desktop-width) {
     width: 245px;
+    min-height: 434px;
   }
 
   &--all {
     @media (min-width: @tablet-width) {
       border: 2px solid @basic_grey;
       background-color: @basic_white;
+      width: 320px;
+
+      @media (min-width: @desktop-width) {
+        width: 245px;
+      }
     }
   }
 }
@@ -61,6 +70,7 @@
   font-weight: 400;
   color: @optional_black;
   text-align: center;
+  text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
     width: 134px;
@@ -87,15 +97,33 @@
     font-size: 16px;
     line-height: 18px;
     text-align: center;
-    margin-top: 23px;
+    margin-top: 26px;
+  }
+}
+
+.catalog__button-plus {
+  margin: 25px auto 0;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: @basic_white;
+  background-image: url("../img/icon-plus.svg");
+  cursor: pointer;
+  border: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog__button-plus {
+    width: 60px;
+    height: 60px;
+    margin-top: 52px;
+    background-image: url("../img/icon-plus-desktop.svg");
   }
 }
 
 .catalog__button {
   width: 280px;
   margin: 0 auto;
-  margin-top: 13px;
-  margin-bottom: 24px;
   padding: 10px 0;
   font-size: 16px;
   line-height: 20px;
@@ -103,7 +131,7 @@
   @media (min-width: @tablet-width) {
     width: 250px;
     margin-bottom: 0;
-    margin-top: 33px;
+    margin-top: 31px;
   }
 
   @media (min-width: @desktop-width) {

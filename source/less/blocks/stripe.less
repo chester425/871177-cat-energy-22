@@ -98,10 +98,22 @@
   }
 
   &--additional-goods {
-    margin-top: 25px;
+    margin-top: 23px;
+
+    @media (min-width: @tablet-width) {
+      margin-top: 62px;
+    }
 
     @media (min-width: @desktop-width) {
       margin-top: 68px;
+    }
+
+    span {
+      padding-right: 22px;
+
+      @media (min-width: @tablet-width) {
+        padding-right: 32px;
+      }
     }
   }
 

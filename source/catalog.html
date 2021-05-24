@@ -2,13 +2,16 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+  <script src="js/script.min.js" type="text/javascript" async></script>
   <title>HTML Academy: Кэт энерджи</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="page__body">
   <header class="page-header">
     <div class="page-header__wrapper centered">
-      <a class="page-header__logo-title">
+      <a class="page-header__logo-title" href="index.html">
         <picture>
           <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
@@ -39,9 +42,9 @@
           <article class="product centered">
             <a class="image product__image" href="#">
               <picture>
-                <source media="(min-width: 1440px)" srcset="img/chicken-small-desktop.png">
-                <source media="(min-width: 768px)" srcset="img/chicken-small-tablet.png">
-                <img src="img/chicken-small-mobile.jpg" alt="фото корма">
+                <source media="(min-width: 1440px)" srcset="img/chicken-small-desktop.png, img/chicken-small-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/chicken-small-tablet.png, img/chicken-small-tablet@2x.png 2x">
+                <img src="img/chicken-small-mobile.jpg" srcset="img/chicken-small-mobile@2x.jpg 2x" alt="фото корма">
               </picture>
             </a>
             <div class="product__title-box">
@@ -66,11 +69,11 @@
         </li>
         <li class="catalog__item">
           <article class="product centered">
-            <a class="image product__image product__image--big" href="#">
+            <a class="image product__image product__image--big product__image--big-chicken" href="#">
               <picture>
-                <source media="(min-width: 1440px)" srcset="img/chicken-big-desktop.png">
-                <source media="(min-width: 768px)" srcset="img/chicken-big-tablet.png">
-                <img src="img/chicken-big-mobile.jpg" alt="фото корма">
+                <source media="(min-width: 1440px)" srcset="img/chicken-big-desktop.png, img/chicken-big-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/chicken-big-tablet.png, img/chicken-big-tablet@2x.png 2x">
+                <img src="img/chicken-big-mobile.jpg" srcset="img/chicken-big-mobile@2x.jpg 2x" alt="фото корма">
               </picture>
             </a>
             <div class="product__title-box">
@@ -95,11 +98,11 @@
         </li>
         <li class="catalog__item">
           <article class="product centered">
-            <a class="image product__image" href="#">
+            <a class="image product__image product__image--fish" href="#">
               <picture>
-                <source media="(min-width: 1440px)" srcset="img/fish-small-desktop.png">
-                <source media="(min-width: 768px)" srcset="img/fish-small-tablet.png">
-                <img src="img/fish-small-mobile.jpg" alt="фото корма">
+                <source media="(min-width: 1440px)" srcset="img/fish-small-desktop.png, img/fish-small-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/fish-small-tablet.png, img/fish-small-tablet@2x.png 2x">
+                <img src="img/fish-small-mobile.jpg" srcset="img/fish-small-mobile@2x.jpg 2x" alt="фото корма">
               </picture>
             </a>
             <div class="product__title-box">
@@ -126,9 +129,9 @@
           <article class="product centered">
             <a class="image product__image product__image--big" href="#">
               <picture>
-                <source media="(min-width: 1440px)" srcset="img/fish-big-desktop.png">
-                <source media="(min-width: 768px)" srcset="img/fish-big-tablet.png">
-                <img src="img/fish-big-mobile.jpg" alt="фото корма">
+                <source media="(min-width: 1440px)" srcset="img/fish-big-desktop.png, img/fish-big-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/fish-big-tablet.png, img/fish-big-tablet@2x.png 2x">
+                <img src="img/fish-big-mobile.jpg" srcset="img/fish-big-mobile@2x.jpg 2x" alt="фото корма">
               </picture>
             </a>
             <div class="product__title-box">
@@ -153,14 +156,14 @@
         </li>
         <li class="catalog__item">
           <article class="product centered">
-            <a class="image product__image" href="#">
+            <a class="image product__image product__image--buckwheat" href="#">
               <picture>
-                <source media="(min-width: 1440px)" srcset="img/buckwheat-small-desktop.png">
-                <source media="(min-width: 768px)" srcset="img/buckwheat-small-tablet.png">
-                <img src="img/buckwheat-small-mobile.jpg" alt="фото корма">
+                <source media="(min-width: 1440px)" srcset="img/buckwheat-small-desktop.png, img/buckwheat-small-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/buckwheat-small-tablet.png, img/buckwheat-small-tablet@2x.png 2x">
+                <img src="img/buckwheat-small-mobile.jpg" srcset="img/buckwheat-small-mobile@2x.jpg 2x" alt="фото корма">
               </picture>
             </a>
-            <div class="product__title-box">
+            <div class="product__title-box"><a name="catalog-slim"></a>
               <h2 class="product__title"><a href="#">Cat energy slim 500 г</a></h2>
               <table class="product__table">
                 <tr>
@@ -173,7 +176,7 @@
                 </tr>
                 <tr>
                   <td>Цена</td>
-                  <td>700 Р</td>
+                  <td>400 Р</td>
                 </tr>
               </table>
             </div>
@@ -184,9 +187,9 @@
           <article class="product centered">
             <a class="image product__image product__image--big" href="#">
               <picture>
-                <source media="(min-width: 1440px)" srcset="img/buckwheat-big-desktop.png">
-                <source media="(min-width: 768px)" srcset="img/buckwheat-big-tablet.png">
-                <img src="img/buckwheat-big-mobile.jpg" alt="фото корма">
+                <source media="(min-width: 1440px)" srcset="img/buckwheat-big-desktop.png, img/buckwheat-big-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/buckwheat-big-tablet.png, img/buckwheat-big-tablet@2x.png 2x">
+                <img src="img/buckwheat-big-mobile.jpg" srcset="img/buckwheat-big-mobile@2x.jpg 2x" alt="фото корма">
               </picture>
             </a>
             <div class="product__title-box">
@@ -202,7 +205,7 @@
                 </tr>
                 <tr>
                   <td>Цена</td>
-                  <td>1000 Р</td>
+                  <td>700 Р</td>
                 </tr>
               </table>
             </div>
@@ -211,11 +214,11 @@
         </li>
         <li class="catalog__item">
           <article class="product centered">
-            <a class="image product__image" href="#">
+            <a class="image product__image product__image--rice" href="#">
               <picture>
-                <source media="(min-width: 1440px)" srcset="img/rice-small-desktop.png">
-                <source media="(min-width: 768px)" srcset="img/rice-small-tablet.png">
-                <img src="img/rice-small-mobile.jpg" alt="фото корма">
+                <source media="(min-width: 1440px)" srcset="img/rice-small-desktop.png, img/rice-small-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/rice-small-tablet.png, img/rice-small-tablet@2x.png 2x">
+                <img src="img/rice-small-mobile.jpg" srcset="img/rice-small-mobile@2x.jpg 2x" alt="фото корма">
               </picture>
             </a>
             <div class="product__title-box">
@@ -231,7 +234,7 @@
                 </tr>
                 <tr>
                   <td>Цена</td>
-                  <td>700 Р</td>
+                  <td>500 Р</td>
                 </tr>
               </table>
             </div>
@@ -239,6 +242,7 @@
           <a class="button catalog__button" href="#">заказать</a>
         </li>
         <li class="catalog__item catalog__item--all">
+          <button class="catalog__button-plus" type="button" name="button"></button>
           <h2 class="catalog__all-title">Показать еще 100500 товаров</h2>
           <p class="catalog__all-paragraph">На самом деле вкусов гораздо больше!</p>
           <a class="button catalog__button  catalog__button--all" href="#">Показать всё</a>
@@ -299,20 +303,15 @@
       </div>
     </section>
     <!-- Секция с картой -->
-    <section class="contacts contacts--form">
+    <section class="contacts contacts--catalog">
       <h2 class="visually-hidden">Карта</h2>
       <div class="contacts__box centered">
         <div class="contacts__wrapper">
-          <p class="contacts__partner">Приглашаем <br>к сотрудничеству дилеров!</p>
+          <p class="contacts__partner">Приглашаем <br><span>к сотрудничеству дилеров!</span></p>
           <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></p>
         </div>
       </div>
-      <div class="contacts__map">
-        <picture>
-          <source media="(min-width: 1440px)" srcset="img/map-desktop.png">
-          <source media="(min-width: 768px)" srcset="img/map-tablet.png">
-          <img src="img/map.png" alt="картa">
-        </picture>
+      <div class="contacts__map contacts__map--other" id="map">
         <img class="contacts__map-icon" src="img/map-pin.png" width="57" height="53" alt="метка на карте">
       </div>
     </section>
@@ -325,25 +324,33 @@
         <div class="page-footer__social">
           <ul class="page-footer__social-list">
             <li class="page-footer__social-item">
-              <a class="page-footer__link" href="https://vk.com/htmlacademy">
-                <img src="img/icon-vk.svg" width="23" height="16" alt="Иконка вк">
+              <a class="page-footer__link  page-footer__link--vk" href="https://vk.com/htmlacademy">
+                <svg width="23" height="16">
+                  <use xlink:href="img/sprite.svg#icon-vk"></use>
+                </svg>
               </a>
             </li>
             <li class="page-footer__social-item">
-              <a class="page-footer__link" href="https://www.instagram.com/htmlacademy">
-                <img src="img/icon-instagram.svg" width="16" height="16" alt="Иконка инстаграмма">
+              <a class="page-footer__link page-footer__link--instagram" href="https://www.instagram.com/htmlacademy">
+                <svg width="16" height="16">
+                  <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                </svg>
               </a>
             </li>
             <li class="page-footer__social-item">
-              <a class="page-footer__link" href="https://www.facebook.com/htmlacademy">
-                <img src="img/icon-fb.svg" width="22" height="22" alt="Иконка фейсбук">
+              <a class="page-footer__link page-footer__link--fb" href="https://www.facebook.com/htmlacademy">
+                <svg width="22" height="22">
+                  <use xlink:href="img/sprite.svg#icon-fb"></use>
+                </svg>
               </a>
             </li>
           </ul>
         </div>
         <div class="page-footer__copyright">
-          <a class="page-footer__copyright-logo" href="https://up.htmlacademy.ru/adaptive/21">HTML Academy
-            <img src="img/icon-htmlacademy.svg" width="40" height="40" alt="Логотип академии">
+          <a class="page-footer__copyright-logo" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
+            <svg class="page-footer__copyright-icon" width="40" height="40">
+              <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
+            </svg>
           </a>
         </div>
       </div>

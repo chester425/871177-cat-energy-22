@@ -14,11 +14,11 @@ function init () {
 
   // Наша метка, указываем коордианты
   myGeoObjects = new ymaps.Placemark([59.937853, 30.329614],{
-    balloonContentBody: 'Текст в балуне',
+    balloonContentBody: "Текст в балуне",
   },{
-    iconLayout: 'default#image',
+    iconLayout: "default#image",
     // Путь до нашей картинки
-    iconImageHref: 'img/map-pin.png',
+    iconImageHref: "img/map-pin.png",
     // Размер по ширине и высоте
     iconImageSize: [55, 53],
     // Смещение левого верхнего угла иконки относительно
@@ -35,6 +35,6 @@ function init () {
   clusterer.add(myGeoObjects);
   myMap.geoObjects.add(clusterer);
   // Отлючаем возможность изменения масштаба
-  myMap.behaviors.disable('scrollZoom');
+  myMap.behaviors.disable("scrollZoom");
 
 }

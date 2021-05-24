@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-  <script src="js/map.js" type="text/javascript"></script>
+  <script src="js/script.min.js" type="text/javascript" async></script>
   <title>HTML Academy: Кэт энерджи</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="page__body">
   <header class="page-header">
@@ -20,7 +20,7 @@
       </a>
       <button class="page-header__toggle" type="button"></button>
     </div>
-    <nav class="main-menu main-menu--closed">
+    <nav class="main-menu">
       <ul class="main-menu__list menu-list">
         <li class="menu-list__item">
           <a href="index.html">Главная</a>
@@ -145,12 +145,7 @@
           <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></p>
         </div>
       </div>
-      <div class="contacts__map contacts__map--other">
-        <picture>
-          <source media="(min-width: 1440px)" srcset="img/map-desktop.png">
-          <source media="(min-width: 768px)" srcset="img/map-tablet.png">
-          <img src="img/map.png" alt="картa">
-        </picture>
+      <div class="contacts__map contacts__map--other" id="map">
         <img class="contacts__map-icon" src="img/map-pin.png" width="57" height="53" alt="метка на карте">
       </div>
     </section>
@@ -195,8 +190,5 @@
       </div>
     </footer>
   </main>
-  <script src="js/open-menu.js" type="text/javascript" async></script>
-  <script src="js/button-closed.js" type="text/javascript" async></script>
-  <script src="js/invalid-input.js" type="text/javascript"></script>
 </body>
 </html>

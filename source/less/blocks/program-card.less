@@ -80,7 +80,7 @@
   color: @basic_black;
   border-top: 1px solid @special_grey-2;
   width: 240px;
-  display: inline-block;
+  display: flex;
   margin-top: 23px;
   margin-left: 20px;
   padding-top: 18px;
@@ -99,28 +99,40 @@
     margin: 6px 0 17px 52px;
   }
 
-  svg {
-    margin-left: 11px;
-    margin-bottom: 3px;
+  &::after {
+    content: "";
+    background-image: url("../img/icon-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: -8px 2px;
+    width: 40px;
+    margin-left: 16px;
 
     @media (min-width: @tablet-width) {
-      margin-left: 20px;
-      margin-bottom: 5px;
+      background-position: -8px 10px;
+      width: 40px;
+      margin-left: 25px;
     }
 
     @media (min-width: @desktop-width) {
-      margin-left: 24px;
-      margin-bottom: 4px;
+      background-position: -8px 11px;
+      margin-left: 28px;
+    }
+  }
+
+  &:hover::after {
+    background-position: 0 2px;
+
+    @media (min-width: @tablet-width) {
+      background-position: 0 10px;
     }
 
-    &:hover {
-      width: 32px;
-      height: 10px;
+    @media (min-width: @desktop-width) {
+      background-position: 0 11px;
     }
+  }
 
-    &:active {
-      opacity: 0.3;
-    }
+  &:hover:active {
+    opacity: 0.3;
   }
 }
 

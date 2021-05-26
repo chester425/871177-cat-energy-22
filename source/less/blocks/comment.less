@@ -1,38 +1,50 @@
 .comment {
-  textarea {
-    margin: 0 auto;
-    margin-top: 35px;
-    display: block;
-    text-align: center;
-    width: 274px;
-    min-height: 138px;
-    box-shadow: 0 0 0 1px @special_grey-4;
-    padding-top: 8px;
-    border: none;
+  margin: 0 auto;
+  margin-top: 35px;
+  display: block;
+  text-align: center;
+  width: 274px;
+  min-height: 138px;
+  box-shadow: 0 0 0 1px @special_grey-4;
+  padding-top: 8px;
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    width: 607px;
+    min-height: 161px;
+    margin-top: 73px;
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 73px;
+    width: 1199px;
+    resize: vertical;
+  }
+
+  &::placeholder {
+    font-family: @main-font-oswald;
+    line-height: 18px;
+    font-size: 16px;
+    font-weight: 400;
+    color: @special_dark-grey;
+    text-transform: uppercase;
 
     @media (min-width: @tablet-width) {
-      width: 607px;
-      min-height: 161px;
-      margin-top: 73px;
-      text-align: left;
-      padding-left: 20px;
-      padding-top: 10px;
+      line-height: 30px;
+      font-size: 20px;
     }
+  }
 
-    @media (min-width: @desktop-width) {
-      margin-top: 73px;
-      width: 1199px;
-      resize: vertical;
-    }
+  &:hover {
+    box-shadow: 0 0 0 1px @special_grey-3;
+    border-color: @special_grey-3;
+  }
 
-    &:hover {
-      box-shadow: 0 0 0 1px @special_grey-3;
-      border-color: @special_grey-3;
-    }
-
-    &:focus {
-      box-shadow: 0 0 0 2px @special_dark-grey;
-      outline: 0;
-    }
+  &:focus {
+    box-shadow: 0 0 0 2px @special_dark-grey;
+    outline: 0;
   }
 }
